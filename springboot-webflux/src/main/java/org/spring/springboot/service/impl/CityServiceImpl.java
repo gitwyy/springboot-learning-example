@@ -18,10 +18,10 @@ import java.util.Map;
 public class CityServiceImpl implements CityService {
 
     // 模拟数据库，存储 City 信息
-    private static Map<Long, City> CITY_DB = new HashMap<>();
+    private static Map<Long, City> CITY_DB = new HashMap<Long, City>();
 
     public List<City> findAllCity() {
-        return new ArrayList<>(CITY_DB.values());
+        return new ArrayList<City>(CITY_DB.values());
     }
 
     public City findCityById(Long id) {

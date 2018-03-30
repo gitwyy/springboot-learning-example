@@ -9,7 +9,7 @@ import org.spring.springboot.domain.User;
  *
  * Created by bysocket on 07/02/2017.
  */
-@Mapper
+
 public interface UserDao {
 
     /**

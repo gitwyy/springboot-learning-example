@@ -2,8 +2,32 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<name>springboot :: Examples</name>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.0.4.RELEASE</version>
+        </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+			<version>2.0.0.RELEASE</version>
+		</dependency>
+	</dependencies>
 
-	<groupId>springboot</groupId>
+    <groupId>springboot</groupId>
 	<artifactId>springboot</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -59,6 +83,8 @@
 		<!-- 第五章数据分页排序案例 -->
 		<module>chapter-5-spring-boot-paging-sorting</module>
 
+		<module>chapter-2-spring-boot-quick-start</module>
+		<module>springboot-webflux</module>
 	</modules>
 
 </project>
